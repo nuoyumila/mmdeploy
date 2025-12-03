@@ -56,7 +56,7 @@ jobs:
           LABEL: 'build'
           STATUS: ${{ steps.badge_status.conclusion == 'success' && 'passing' || 'failing' }}
           COLOR: ${{ steps.badge_status.conclusion == 'success' && 'green' || 'red' }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 
   build_pplnn_cpu:
@@ -81,4 +81,4 @@ jobs:
           LABEL: 'build'
           STATUS: ${{ steps.badge_status.conclusion == 'success' && 'passing' || 'failing' }}
           COLOR: ${{ steps.badge_status.conclusion == 'success' && 'blue' || 'red' }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
