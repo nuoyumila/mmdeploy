@@ -47,5 +47,5 @@ jobs:
           ls -sha $OUTPUT_DIR/sdk
       - name: Upload mmdeploy sdk
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: gh release upload v${MMDEPLOY_VERSION} ${OUTPUT_DIR}/sdk/*.zip ${OUTPUT_DIR}/sdk/*.tar.gz --clobber
